@@ -1,0 +1,350 @@
+{
+  "execution_info": {
+    "total_time_minutes": 135.20706905523937,
+    "adaptive_mode": false,
+    "force_full_evaluation": true,
+    "templates_tested": 13,
+    "corruptions_tested": 9,
+    "images_per_test": 500
+  },
+  "optimization_settings": {
+    "batch_size": 16,
+    "max_workers": 12,
+    "device": "cuda",
+    "mixed_precision": true
+  },
+  "dataset_info": {
+    "name": "cifar-100-python",
+    "num_classes": 100,
+    "train_samples": 40000,
+    "val_samples": 33626,
+    "test_samples": 500
+  },
+  "best_clean_performance": {
+    "prompt": "a painting of a {}",
+    "top1_accuracy": 0.622,
+    "top5_accuracy": 0.92
+  },
+  "robustness_analysis": {
+    "most_robust_prompt": "a cropped image of a {}",
+    "avg_robustness_drop": 0.1848395061728395,
+    "tested_corruptions": [
+      "gaussian_blur",
+      "motion_blur",
+      "gaussian_noise",
+      "salt_pepper_noise",
+      "random_occlusion",
+      "cutout",
+      "brightness",
+      "contrast",
+      "jpeg"
+    ]
+  },
+  "corruption_ranking": {
+    "jpeg": 0.006000000000000005,
+    "contrast": 0.018444444444444447,
+    "random_occlusion": 0.05066666666666665,
+    "cutout": 0.05066666666666667,
+    "brightness": 0.05466666666666667,
+    "salt_pepper_noise": 0.12399999999999999,
+    "motion_blur": 0.3451111111111111,
+    "gaussian_blur": 0.45355555555555555,
+    "gaussian_noise": 0.5604444444444444
+  },
+  "prompt_resilience_analysis": {
+    "overview": {
+      "most_resilient_prompt": "a cropped image of a {}",
+      "best_resilience_score": 0.8203703703703704,
+      "least_resilient_prompt": "a painting of a {}",
+      "worst_resilience_score": 0.8098518518518518
+    },
+    "top_resilient_prompts": [
+      {
+        "rank": 1,
+        "prompt": "a cropped image of a {}",
+        "average_robustness_drop": 0.1796296296296296,
+        "resilience_score": 0.8203703703703704,
+        "resilience_category": "Medium"
+      },
+      {
+        "rank": 2,
+        "prompt": "a high resolution image of a {}",
+        "average_robustness_drop": 0.18474074074074073,
+        "resilience_score": 0.8152592592592592,
+        "resilience_category": "Medium"
+      },
+      {
+        "rank": 3,
+        "prompt": "a painting of a {}",
+        "average_robustness_drop": 0.19014814814814815,
+        "resilience_score": 0.8098518518518518,
+        "resilience_category": "Medium"
+      }
+    ],
+    "complete_prompt_ranking": [
+      {
+        "rank": 1,
+        "prompt": "a cropped image of a {}",
+        "average_robustness_drop": 0.1796296296296296,
+        "resilience_score": 0.8203703703703704,
+        "resilience_category": "Medium"
+      },
+      {
+        "rank": 2,
+        "prompt": "a high resolution image of a {}",
+        "average_robustness_drop": 0.18474074074074073,
+        "resilience_score": 0.8152592592592592,
+        "resilience_category": "Medium"
+      },
+      {
+        "rank": 3,
+        "prompt": "a painting of a {}",
+        "average_robustness_drop": 0.19014814814814815,
+        "resilience_score": 0.8098518518518518,
+        "resilience_category": "Medium"
+      }
+    ],
+    "corruption_specific_resilience": {
+      "gaussian_blur": {
+        "most_resilient_prompt": "a high resolution image of a {}",
+        "best_resilience_drop": 0.44799999999999995,
+        "worst_resilience_drop": 0.4573333333333333,
+        "ranking": [
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.44799999999999995
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.45533333333333337
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.4573333333333333
+          }
+        ]
+      },
+      "motion_blur": {
+        "most_resilient_prompt": "a painting of a {}",
+        "best_resilience_drop": 0.332,
+        "worst_resilience_drop": 0.36599999999999994,
+        "ranking": [
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.332
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.3373333333333333
+          },
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.36599999999999994
+          }
+        ]
+      },
+      "gaussian_noise": {
+        "most_resilient_prompt": "a cropped image of a {}",
+        "best_resilience_drop": 0.49,
+        "worst_resilience_drop": 0.6166666666666667,
+        "ranking": [
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.49
+          },
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.5746666666666665
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.6166666666666667
+          }
+        ]
+      },
+      "salt_pepper_noise": {
+        "most_resilient_prompt": "a painting of a {}",
+        "best_resilience_drop": 0.11066666666666665,
+        "worst_resilience_drop": 0.1353333333333333,
+        "ranking": [
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.11066666666666665
+          },
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.126
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.1353333333333333
+          }
+        ]
+      },
+      "random_occlusion": {
+        "most_resilient_prompt": "a high resolution image of a {}",
+        "best_resilience_drop": 0.0453333333333333,
+        "worst_resilience_drop": 0.05866666666666661,
+        "ranking": [
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.0453333333333333
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.04800000000000004
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.05866666666666661
+          }
+        ]
+      },
+      "cutout": {
+        "most_resilient_prompt": "a high resolution image of a {}",
+        "best_resilience_drop": 0.04466666666666667,
+        "worst_resilience_drop": 0.05733333333333331,
+        "ranking": [
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.04466666666666667
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.050000000000000044
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.05733333333333331
+          }
+        ]
+      },
+      "brightness": {
+        "most_resilient_prompt": "a cropped image of a {}",
+        "best_resilience_drop": 0.04733333333333334,
+        "worst_resilience_drop": 0.06,
+        "ranking": [
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.04733333333333334
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.05666666666666668
+          },
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.06
+          }
+        ]
+      },
+      "contrast": {
+        "most_resilient_prompt": "a high resolution image of a {}",
+        "best_resilience_drop": 0.006666666666666672,
+        "worst_resilience_drop": 0.026000000000000023,
+        "ranking": [
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": 0.006666666666666672
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.02266666666666665
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.026000000000000023
+          }
+        ]
+      },
+      "jpeg": {
+        "most_resilient_prompt": "a high resolution image of a {}",
+        "best_resilience_drop": -0.008666666666666675,
+        "worst_resilience_drop": 0.016000000000000014,
+        "ranking": [
+          {
+            "prompt": "a high resolution image of a {}",
+            "robustness_drop": -0.008666666666666675
+          },
+          {
+            "prompt": "a cropped image of a {}",
+            "robustness_drop": 0.010666666666666677
+          },
+          {
+            "prompt": "a painting of a {}",
+            "robustness_drop": 0.016000000000000014
+          }
+        ]
+      }
+    },
+    "statistical_summary": {
+      "total_prompts_tested": 3,
+      "total_corruptions_tested": 9,
+      "average_clean_accuracy": 0.5449230769230768,
+      "average_robustness_drop_all_prompts": 0.1848395061728395,
+      "std_robustness_drop": 0.20314449640527574,
+      "best_worst_gap": 0.010518518518518538
+    },
+    "recommendations": [
+      {
+        "type": "best_overall",
+        "recommendation": "Use 'a cropped image of a {}' for general robustness",
+        "rationale": "Shows lowest average robustness drop of 0.180"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "gaussian_blur",
+        "recommendation": "For gaussian_blur, use 'a high resolution image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.448"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "motion_blur",
+        "recommendation": "For motion_blur, use 'a painting of a {}'",
+        "rationale": "Best performance with robustness drop of 0.332"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "gaussian_noise",
+        "recommendation": "For gaussian_noise, use 'a cropped image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.490"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "salt_pepper_noise",
+        "recommendation": "For salt_pepper_noise, use 'a painting of a {}'",
+        "rationale": "Best performance with robustness drop of 0.111"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "random_occlusion",
+        "recommendation": "For random_occlusion, use 'a high resolution image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.045"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "cutout",
+        "recommendation": "For cutout, use 'a high resolution image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.045"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "brightness",
+        "recommendation": "For brightness, use 'a cropped image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.047"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "contrast",
+        "recommendation": "For contrast, use 'a high resolution image of a {}'",
+        "rationale": "Best performance with robustness drop of 0.007"
+      },
+      {
+        "type": "corruption_specific",
+        "corruption": "jpeg",
+        "recommendation": "For jpeg, use 'a high resolution image of a {}'",
+        "rationale": "Best performance with robustness drop of -0.009"
+      }
+    ]
+  }
+}

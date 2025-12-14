@@ -1,0 +1,54 @@
+{
+  "execution_info": {
+    "total_time_minutes": 135.20706905523937,
+    "adaptive_mode": false,
+    "force_full_evaluation": true,
+    "templates_tested": 13,
+    "corruptions_tested": 9,
+    "images_per_test": 500
+  },
+  "optimization_settings": {
+    "batch_size": 16,
+    "max_workers": 12,
+    "device": "cuda",
+    "mixed_precision": true
+  },
+  "dataset_info": {
+    "name": "cifar-100-python",
+    "num_classes": 100,
+    "train_samples": 40000,
+    "val_samples": 33626,
+    "test_samples": 500
+  },
+  "best_clean_performance": {
+    "prompt": "a painting of a {}",
+    "top1_accuracy": 0.622,
+    "top5_accuracy": 0.92
+  },
+  "robustness_analysis": {
+    "most_robust_prompt": "a cropped image of a {}",
+    "avg_robustness_drop": 0.1848395061728395,
+    "tested_corruptions": [
+      "gaussian_blur",
+      "motion_blur",
+      "gaussian_noise",
+      "salt_pepper_noise",
+      "random_occlusion",
+      "cutout",
+      "brightness",
+      "contrast",
+      "jpeg"
+    ]
+  },
+  "corruption_ranking": {
+    "jpeg": 0.006000000000000005,
+    "contrast": 0.018444444444444447,
+    "random_occlusion": 0.05066666666666665,
+    "cutout": 0.05066666666666667,
+    "brightness": 0.05466666666666667,
+    "salt_pepper_noise": 0.12399999999999999,
+    "motion_blur": 0.3451111111111111,
+    "gaussian_blur": 0.45355555555555555,
+    "gaussian_noise": 0.5604444444444444
+  }
+}

@@ -1,0 +1,14 @@
+prompt,top1,top5,total_samples
+a photo of a {},0.596,0.894,500
+a blurry image of a {},0.56,0.856,500
+a microscopic image of a {},0.516,0.862,500
+a high resolution image of a {},0.608,0.924,500
+a low-light photo of a {},0.566,0.866,500
+a close-up photo of a {},0.602,0.91,500
+a cropped image of a {},0.604,0.918,500
+a bright photo of a {},0.558,0.826,500
+a black and white photo of a {},0.582,0.9,500
+a satellite image of {},0.31,0.756,500
+an X-ray image of {},0.564,0.92,500
+a food photo of {},0.396,0.61,500
+a painting of a {},0.622,0.92,500
