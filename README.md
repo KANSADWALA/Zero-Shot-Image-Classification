@@ -18,7 +18,7 @@ This research investigates the impact of prompt engineering and image robustness
 
 <li>Prompt Engineering Analysis: 
   <ul>
-    <li>Evaluates multiple natural language prompt templates to study their impact on zero-shot classification accuracy.</li>
+    <li>Evaluates 13 natural language prompt templates to study their impact on zero-shot classification accuracy.</li>
     <li>Supports descriptive, contextual, and domain-inspired prompt variations.</li>
   </ul>
 </li>
@@ -72,22 +72,17 @@ This research investigates the impact of prompt engineering and image robustness
 
 </ol>
 
+## 📌 Prompt Templates Used
+
+| **Category** | **Prompt Template(s)** |
+|-------------|------------------------|
+| **Baseline** | `a photo of a {}` |
+| **Visual Context** | `a blurry image of a {}`<br>`a microscopic image of a {}` |
+| **Descriptive Adjectives** | `a high resolution image of a {}`<br>`a low-light photo of a {}`<br>`a close-up photo of a {}`<br>`a cropped image of a {}`<br>`a bright photo of a {}`<br>`a black and white photo of a {}` |
+| **Domain-Specific** | `a satellite image of {}`<br>`an X-ray image of {}`<br>`a food photo of {}` |
+| **Additional Variations** | `a painting of a {}` |
 
 
-
-Robustness Evaluation under Image Corruptions
-
-Tests model robustness against real-world image degradations including:
-
-Blur (Gaussian, Motion)
-
-Noise (Gaussian, Salt & Pepper)
-
-Occlusion (Cutout, Random Occlusion)
-
-Lighting variations (Brightness, Contrast)
-
-JPEG compression artifacts
 
 
 
