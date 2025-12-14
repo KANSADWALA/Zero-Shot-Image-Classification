@@ -5,6 +5,33 @@
 <strong>Problem Statement:</strong>
 This research investigates the impact of prompt engineering and image robustness factors on the zero-shot image classification performance of the CLIP vision–language model. The study analyzes how different natural language prompt templates influence classification accuracy and examines the sensitivity of CLIP’s zero-shot predictions to common real-world image corruptions, including blur, noise, occlusion, and lighting variations. By systematically evaluating prompt design choices and corruption severity levels, this work aims to provide insights into optimizing prompt formulations and deploying CLIP-based systems in noisy and unconstrained visual environments.
 
+
+## 📌 Prompt Templates Used
+
+| **Category** | **Prompt Template(s)** |
+|-------------|------------------------|
+| **Baseline** | `a photo of a {}` |
+| **Visual Context** | `a blurry image of a {}`<br>`a microscopic image of a {}` |
+| **Descriptive Adjectives** | `a high resolution image of a {}`<br>`a low-light photo of a {}`<br>`a close-up photo of a {}`<br>`a cropped image of a {}`<br>`a bright photo of a {}`<br>`a black and white photo of a {}` |
+| **Domain-Specific** | `a satellite image of {}`<br>`an X-ray image of {}`<br>`a food photo of {}` |
+| **Additional Variations** | `a painting of a {}` |
+
+
+## 🧪 Image Corruptions used
+
+| **Corruption Name** | **What It Does (Simple Explanation)** |
+|-------------------|----------------------------------------|
+| **Gaussian Blur** | Makes the image soft and unfocused |
+| **Motion Blur** | Simulates camera movement or fast object motion |
+| **Gaussian Noise** | Adds random grain, making the image noisy |
+| **Salt & Pepper Noise** | Introduces random white and black pixels |
+| **Random Occlusion** | Blocks large regions of the image, hiding object parts |
+| **Cutout** | Removes square patches from the image |
+| **Brightness Change** | Makes the image darker or brighter |
+| **Contrast Change** | Alters the difference between light and dark regions |
+| **JPEG Compression** | Adds compression artifacts, making the image blocky or pixelated |
+
+
 ## 🌟 Features
 
 <ol> 
@@ -26,7 +53,7 @@ This research investigates the impact of prompt engineering and image robustness
 
 <li>Robustness Evaluation under Image Corruptions: 
   <ul>
-    <li>Tests model robustness against real-world image degradations including:</li>
+    <li>Tests model robustness against real-world 9 image corruptions and 3 Severity Levels[1, 3 ,5].</li>
     <li>Evaluates performance across multiple corruption severity levels.</li>
   </ul>
 </li>
@@ -72,15 +99,9 @@ This research investigates the impact of prompt engineering and image robustness
 
 </ol>
 
-## 📌 Prompt Templates Used
 
-| **Category** | **Prompt Template(s)** |
-|-------------|------------------------|
-| **Baseline** | `a photo of a {}` |
-| **Visual Context** | `a blurry image of a {}`<br>`a microscopic image of a {}` |
-| **Descriptive Adjectives** | `a high resolution image of a {}`<br>`a low-light photo of a {}`<br>`a close-up photo of a {}`<br>`a cropped image of a {}`<br>`a bright photo of a {}`<br>`a black and white photo of a {}` |
-| **Domain-Specific** | `a satellite image of {}`<br>`an X-ray image of {}`<br>`a food photo of {}` |
-| **Additional Variations** | `a painting of a {}` |
+
+
 
 
 
