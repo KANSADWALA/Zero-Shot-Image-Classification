@@ -1,0 +1,24 @@
+# Core scientific computing
+numpy==1.26.4
+pandas==2.2.1
+
+# Image processing
+Pillow==10.4.0
+
+# Visualization
+matplotlib==3.9.1
+seaborn==0.13.2
+
+# Progress bars
+tqdm==4.66.4
+
+# Deep learning (CUDA 12.4 compatible)
+torch==2.5.1
+torchvision==0.20.1
+transformers==4.53.0
+
+# Image augmentation
+albumentations>=1.1.0
+
+# Machine learning utilities
+scikit-learn==1.4.2
