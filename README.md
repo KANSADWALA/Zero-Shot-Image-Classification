@@ -1,5 +1,4 @@
-# Zero Shot Image Classification with Vision-Language Pre-trained models:
-Prompt Engineering & Robustness Analysis
+# Zero Shot Image Classification with Vision-Language Pre-trained models - Prompt Engineering & Robustness Analysis
 
 ## 📋 Overview
 
